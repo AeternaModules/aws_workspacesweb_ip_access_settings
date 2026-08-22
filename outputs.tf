@@ -1,7 +1,3 @@
-output "workspacesweb_ip_access_settings_id" {
-  description = "Map of id values across all workspacesweb_ip_access_settings, keyed the same as var.workspacesweb_ip_access_settings"
-  value       = { for k, v in aws_workspacesweb_ip_access_settings.workspacesweb_ip_access_settings : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "workspacesweb_ip_access_settings_additional_encryption_context" {
   description = "Map of additional_encryption_context values across all workspacesweb_ip_access_settings, keyed the same as var.workspacesweb_ip_access_settings"
   value       = { for k, v in aws_workspacesweb_ip_access_settings.workspacesweb_ip_access_settings : k => v.additional_encryption_context if v.additional_encryption_context != null && length(v.additional_encryption_context) > 0 }
